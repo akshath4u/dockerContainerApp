@@ -5,7 +5,7 @@ web:
   environment:
     NODE_ENV: production
   links:
-    - mongo
+    - 'mongo:mongo'
 mongo:
   image: mongo
   command: --smallfiles
