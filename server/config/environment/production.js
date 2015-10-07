@@ -1,5 +1,4 @@
 'use strict';
-
 // Production specific configuration
 // =================================
 var MONGO_ADDR = 172.17.0.50;//process.env.MONGO_PORT_27017_TCP_ADDR || 'localhost';
