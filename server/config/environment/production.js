@@ -1,7 +1,8 @@
 'use strict';
+
 // Production specific configuration
 // =================================
-var MONGO_ADDR = 172.17.0.50;//process.env.MONGO_PORT_27017_TCP_ADDR || 'localhost';
+var MONGO_ADDR = process.env.MONGO_PORT_27017_TCP_ADDR || 'localhost';
 var MONGO_PORT = process.env.MONGO_PORT_27017_TCP_PORT || 27017;
 
 module.exports = {
@@ -14,8 +15,9 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://' + MONGO_ADDR + ':' + MONGO_PORT + '/docker-angular-tutum'
+    uri: 'mongodb://172.17.0.50:27017/docker-angular-tutum'
   },
+  //'mongodb://' + MONGO_ADDR + ':' + MONGO_PORT + '/docker-angular-tutum'
 
   // In production our secret will be defined in a environment variable on the server
   secrets: {
